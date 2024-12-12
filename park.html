@@ -1,0 +1,199 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Parkeasy
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3c3WbIaWu1hrsUOFw58nZudQVvJZf2Ps" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white">
+        <div class="container mx-auto flex justify-between items-center p-5">
+            <div class="text-2xl font-bold">
+                Parkeasy
+            </div>
+            <nav class="space-x-4">
+                <a class="hover:underline" href="#features">
+                    Features
+                </a>
+                <a class="hover:underline" href="#parkingslots">Parking slots
+                </a>
+                <a class="hover:underline" href="#paymentmethod">
+                    PaymentMethod
+                </a>
+                <a class="hover:underline" href="#contact">
+                    Contact
+                </a>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="bg-white py-20 mx-auto container">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2">
+                <h1 class="text-4xl font-bold mb-4">
+                    Find Parking Easily with Parkeasy
+                </h1>
+                <p class="mb-6">
+                    Parkeasy helps you find the best parking spots in your city with ease. Use now and
+                    never worry about parking again!
+                </p>
+                <a class="bg-blue-600 text-white px-6 py-3 rounded-full Poppins sans-serif" href="map-page.html">
+                    FIND PARKING
+                </a>
+
+                <!-- Map Container -->
+                <div id="map"></div>
+
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0">
+                <img alt="Screenshot of ParkWheels app showing available parking spots on a map"
+                    class="rounded-lg shadow-lg" height="500"
+                    src="https://storage.googleapis.com/a1aa/image/LelLC3M7XpwGaafKdl34TeNoVCIgs70BJ1dXy5OEp8aIUsznA.jpg"
+                    width="500" />
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section class="bg-gray-200 py-20" id="features">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10">
+                Features
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-map-marked-alt text-blue-600 text-4xl mb-4">
+                    </i>
+                    <h3 class="text-xl font-bold mb-2">
+                        Real-time Parking
+                    </h3>
+                    <p>
+                        Get real-time updates on available parking spots in your area.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-dollar-sign text-blue-600 text-4xl mb-4">
+                    </i>
+                    <h3 class="text-xl font-bold mb-2">
+                        Affordable Rates
+                    </h3>
+                    <p>
+                        Find the most affordable parking rates near you.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-shield-alt text-blue-600 text-4xl mb-4">
+                    </i>
+                    <h3 class="text-xl font-bold mb-2">
+                        Secure Parking
+                    </h3>
+                    <p>
+                        Park your vehicle in secure and monitored parking spots.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Screenshots Section -->
+    <section class="bg-white py-20" id="parkingslots">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10">
+                ParkingSlots
+
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <img alt="Screenshot of ParkWheels app showing the home screen" class="rounded-lg shadow-lg"
+                    height="600" src="./images/img1.jpg" width="300" />
+                <img alt="Screenshot of ParkWheels app showing parking spot details" class="rounded-lg shadow-lg"
+                    height="600" src="./images/img2.jpeg.jpg" width="300" />
+                <img alt="Screenshot of ParkWheels app showing user profile" class="rounded-lg shadow-lg" height="600"
+                    src="./images/img3.jpg" width="300" />
+            </div>
+        </div>
+    </section>
+    <!-- payment section  -->
+    <section class="bg-gray-200 py-20" id="paymentmethod">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10">
+                Payment methods
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img alt="Profile picture of a satisfied user" class="rounded-full mx-auto mb-4" height="100"
+                        src="./images/phonepay.jpg" width="100" />
+                    <p class="italic">
+                        "phonepay "
+                    </p>
+                    <p class="font-bold mt-4">
+
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img alt="Profile picture of a satisfied user" class="rounded-full mx-auto mb-4" height="100"
+                        src="./images/upi.jpg" width="100" />
+                    <p class="italic">
+                        "UPI."
+                    </p>
+                    <p class="font-bold mt-4">
+
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img alt="Profile picture of a satisfied user" class="rounded-full mx-auto mb-4" height="100"
+                        src="./images/cash.jpg" width="100" />
+                    <p class="italic">
+                        "CASH PAYMENT"
+                    </p>
+                    <p class="font-bold mt-4">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-white py-20" id="contact">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10">
+                Contact Us
+            </h2>
+            <form class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <input class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your Name" type="text" />
+                </div>
+                <div class="mb-4">
+                    <input class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Your Email" type="email" />
+                </div>
+                <div class="mb-4">
+                    <textarea class="w-full p-3 border border-gray-300 rounded-lg"
+                        placeholder="Your Message"></textarea>
+                </div>
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-full" type="submit">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-6">
+        <div class="container mx-auto text-center">
+
+        </div>
+    </footer>
+</body>
+
+</html>
